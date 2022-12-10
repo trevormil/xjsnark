@@ -9,6 +9,7 @@
   </languages>
   <imports>
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
+    <import index="85wc" ref="1e4d45b9-368c-4e87-8555-ad69375f82e7/java:backend.config(xjsnark.runtime/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -38,6 +39,9 @@
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
+      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
+        <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
@@ -78,6 +82,9 @@
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
@@ -802,6 +809,30 @@
             <property role="3SKdUp" value="This method can be left empty, or used to set Configuration params (see examples)" />
           </node>
         </node>
+        <node concept="3clFbH" id="5OooeFjUAe_" role="3cqZAp" />
+        <node concept="3clFbF" id="4dNxypETO55" role="3cqZAp">
+          <node concept="37vLTI" id="4dNxypETO56" role="3clFbG">
+            <node concept="3clFbT" id="4dNxypETO57" role="37vLTx">
+              <property role="3clFbU" value="true" />
+            </node>
+            <node concept="10M0yZ" id="4dNxypETO58" role="37vLTJ">
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+              <ref role="3cqZAo" to="85wc:~Config.writeCircuits" resolve="writeCircuits" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4dNxypETO59" role="3cqZAp">
+          <node concept="37vLTI" id="4dNxypETO5a" role="3clFbG">
+            <node concept="Xl_RD" id="4dNxypETO5b" role="37vLTx">
+              <property role="Xl_RC" value="/home/trevormil/CompSci/thesis-git/xjsnark-files/circuits" />
+            </node>
+            <node concept="10M0yZ" id="4dNxypETO5c" role="37vLTJ">
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+              <ref role="3cqZAo" to="85wc:~Config.outputFilesPath" resolve="outputFilesPath" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5OooeFjUAfx" role="3cqZAp" />
       </node>
       <node concept="37vLTG" id="2iHr7jBepmc" role="3clF46">
         <property role="TrG5h" value="args" />

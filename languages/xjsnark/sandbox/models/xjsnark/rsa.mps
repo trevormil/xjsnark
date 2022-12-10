@@ -9,6 +9,7 @@
   </languages>
   <imports>
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
+    <import index="85wc" ref="1e4d45b9-368c-4e87-8555-ad69375f82e7/java:backend.config(xjsnark.runtime/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
   </imports>
@@ -96,6 +97,9 @@
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
@@ -843,7 +847,54 @@
       <node concept="3cqZAl" id="5CNaGjSSMhf" role="3clF45" />
       <node concept="3Tm1VV" id="5CNaGjSSMhg" role="1B3o_S" />
       <node concept="3clFbS" id="5CNaGjSSMhh" role="3clF47">
-        <node concept="3clFbH" id="5CNaGjSSMhi" role="3cqZAp" />
+        <node concept="3cpWs8" id="6GxbEBjJ1uw" role="3cqZAp">
+          <node concept="3cpWsn" id="6GxbEBjJ1ux" role="3cpWs9">
+            <property role="TrG5h" value="modulus" />
+            <node concept="3uibUv" id="6GxbEBjJ1uy" role="1tU5fm">
+              <ref role="3uigEE" to="xlxw:~BigInteger" resolve="BigInteger" />
+            </node>
+            <node concept="2ShNRf" id="6GxbEBjJ1uz" role="33vP2m">
+              <node concept="1pGfFk" id="6GxbEBjJ1u$" role="2ShVmc">
+                <ref role="37wK5l" to="xlxw:~BigInteger.&lt;init&gt;(java.lang.String)" resolve="BigInteger" />
+                <node concept="Xl_RD" id="6GxbEBjJ1u_" role="37wK5m">
+                  <property role="Xl_RC" value="25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784406918290641249515082189298559149176184502808489120072844992687392807287776735971418347270261896375014971824691165077613379859095700097330459748808428401797429100642458691817195118746121515172654632282216869987549182422433637259085141865462043576798423387184774447920739934236584823824281198163815010674810451660377306056201619676256133844143603833904414952634432190114657544454178424020924616515723350778707749817125772467962926386356373289912154831438167899885040445364023527381951378636564391212010397122822120720357" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="6GxbEBjJ1sx" role="3cqZAp" />
+        <node concept="3clFbF" id="DHk6qGPTOI" role="3cqZAp">
+          <node concept="37vLTI" id="DHk6qGPTTj" role="3clFbG">
+            <node concept="3clFbT" id="DHk6qGPTUB" role="37vLTx">
+              <property role="3clFbU" value="true" />
+            </node>
+            <node concept="10M0yZ" id="DHk6qGPTOH" role="37vLTJ">
+              <ref role="3cqZAo" to="85wc:~Config.writeCircuits" resolve="writeCircuits" />
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="6GOy9vTY3tD" role="3cqZAp">
+          <node concept="37vLTI" id="6GOy9vTY3xZ" role="3clFbG">
+            <node concept="Xl_RD" id="6GOy9vTY3yU" role="37vLTx">
+              <property role="Xl_RC" value="/home/trevormil/CompSci/thesis-git/student-grade-example/xjsnarkCircuitFiles" />
+            </node>
+            <node concept="10M0yZ" id="6GOy9vTY3tC" role="37vLTJ">
+              <ref role="3cqZAo" to="85wc:~Config.outputFilesPath" resolve="outputFilesPath" />
+              <ref role="1PxDUh" to="85wc:~Config" resolve="Config" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="6GxbEBjIyli" role="3cqZAp">
+          <node concept="2YIFZM" id="6GxbEBjIynS" role="3clFbG">
+            <ref role="37wK5l" to="85wc:~Config.setFiniteFieldModulus(java.math.BigInteger):void" resolve="setFiniteFieldModulus" />
+            <ref role="1Pybhc" to="85wc:~Config" resolve="Config" />
+            <node concept="37vLTw" id="6GxbEBjJ1Hh" role="37wK5m">
+              <ref role="3cqZAo" node="6GxbEBjJ1ux" resolve="modulus" />
+            </node>
+          </node>
+        </node>
         <node concept="3SKdUt" id="5CNaGjSSMhj" role="3cqZAp">
           <node concept="3SKdUq" id="5CNaGjSSMhk" role="3SKWNk">
             <property role="3SKdUp" value="This is the java main method. Its purpose is to make the Progam runnable in the environment" />
